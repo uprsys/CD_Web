@@ -1,0 +1,1877 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/cd3.ico">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="img/cd3.ico">
+
+    <style>
+      .fondo{
+        background: url('img/FERIA200SCR.jpg');
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    
+
+<!-- Barra de navegación -->
+    <div class="container-fluid navbar-dark bg-light">
+
+      <div class="container">
+        <div class="row py-2">
+          <div class="col-sm-12 col-md-1 col-lg-1 text-center">
+            
+            <img src="img/UNAM.png" class="img-fluid" alt="" width=100px>
+          </div>
+          <div class="col-sm-12 col-md-11 col-lg-11 align-self-center">
+            <div class="row"><h5"><b>Universidad Nacional Autónoma de México</b></h6></div>
+            <div class="row"><h5"><b>Facultad de Ingeniería</b></h6></div>
+            <div class="row"><h5"><b>Departamento de Ingeniería Mecatrónica</b></h5></div>
+            <div class="row"><h5"><b>DGAPA - PAPIME - PE115419</b></h5></div>
+            <!--<div class="row"><h4 class="Display-6"><b>Circuitos Digitales</b></h4></div>-->
+            
+          </div>      
+        </div>
+      </div>
+      
+      <nav class="navbar navbar-expand-md bg-primary container">
+        <div class="container-fluid">
+          
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="navbar-brand" >Circuitos Digitales - Biblioteca ESP_PIC</a>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="doc/2016_Temario_CD.pdf " target="_blank">Plan de Estudios</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Temario</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">1. Introducción a los circuitos digitales</a></li>
+                  <li><a class="dropdown-item" href="#">2. Máquinas de estado algorítmico (Cartas ASM)</a></li>
+                  <li><a class="dropdown-item" href="#">3. Microprogramación y diseño de microcontroladores</a></li>
+                  <li><a class="dropdown-item" href="#">4. Programación de microcontroladores</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">PIC</a></li>
+                  <li><a class="dropdown-item" href="#">STM32</a></li>
+                  <li><a class="dropdown-item" href="#">ESP-CAM</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="download.html" target="_blank">Descargas</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ESP_PIC Prácticas -->
+    <div class="container">
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 0. Biblioteca ESP</h3>
+          <h3>Uso de la biblioteca ESP en un proyecto</h3>
+          <p>
+          	La biblioteca ESP permite a los microcontroladores PIC acceder a redes inalámbricas WiFi y a servicios en Internet mediante el control de algún módulo que incorpore el SoC ESP8266 o el ESP32. Esta biblioteca fue diseñada para CCS Compiler como un módulo de compilación separada, que está compuesta por dos archivos: esp.c que contiene el código fuente de las funciones de cada una de las aplicaciones disponibles; y esp.h que es el archivo de cabecera donde el usuario ajusta y habilita las características de la biblioteca. 
+		  </p>
+		  <p><b>Objetivo:</b> 
+		  	Crear un proyecto en MPLAB que use la biblioteca ESP
+		  </p>
+		  <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 0 Biblioteca ESP - Uso de la biblioteca ESP en un proyecto.pdf " 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p0.png" class="img-fluid" alt="" width=300px>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 1A. Estación</h3>
+          <h3>Conexión a un punto de acceso de un módulo ESP</h3>
+          <p>
+          	Una estación es un dispositivo que cuenta con un adaptador WiFi que le permite conectarse a una red para proveer y/o utilizar servicios. Los módulos WiFi que incorporan el SoC ESP8266 o los ESP32 pueden funcionar como estaciones y están diseñados para operar en modo infraestructura, es decir, que se deben conectar a un punto de acceso, el cual  gestionará las conexiones y transmitirá todos los paquetes. Al mismo tiempo, éstos están configurados como estaciones estáticas, por lo que no es posible comunicarse entre redes creadas por diferentes puntos de acceso. 
+          </p>
+          <p>
+          	La biblioteca ESP permite realizar las siguientes acciones cuando el módulo funciona como una estación:
+			<li>Conectarse a un punto de acceso.</li>
+			<li>Obtener o establecer la dirección IP asignada al módulo como estación. </li>
+			<li>Obtener o establecer la dirección MAC del módulo como estación.</li>
+			<li>Desconectarse de un punto de acceso. </li>
+		  </p>
+		  <p><b>Objetivo:</b> Crear un proyecto en MPLAB que use la biblioteca ESP</p>
+	     <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 1A. Estación - Conexión a un punto de acceso de un módulo ESP.pdf " 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p1a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/x79pviUkktI" target="_blank">Vídeo</a>
+          </p>
+        </div>
+
+      </div>
+      <hr>
+      
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 1B. Estación</h3>
+          <h3>Conexión a un punto de acceso de un módulo ESP y uso de la herramienta estatus LED</h3>
+          <p>
+          	Una estación es un dispositivo que cuenta con un adaptador WiFi que le permite conectarse a una red para proveer y/o utilizar servicios. Los módulos WiFi que incorporan el SoC ESP8266 o los ESP32 pueden funcionar como estaciones y están diseñados para operar en modo infraestructura, es decir, que se deben conectar a un punto de acceso, el cual  gestionará las conexiones y transmitirá todos los paquetes. Al mismo tiempo, éstos están configurados como estaciones estáticas, por lo que no es posible comunicarse entre redes creadas por diferentes puntos de acceso. 
+          </p>
+          <p>
+          	La biblioteca ESP permite realizar las siguientes acciones cuando el módulo funciona como una estación:
+			<li>Conectarse a un punto de acceso.</li>
+			<li>Obtener o establecer la dirección IP asignada al módulo como estación. </li>
+			<li>Obtener o establecer la dirección MAC del módulo como estación.</li>
+			<li>Desconectarse de un punto de acceso. </li>
+			<li>Establecer un GPIO del módulo para leer el estado de un LED</li>
+		  </p>
+		  <p><b>Objetivo:</b> Mostar como usar la herramienta estatus LED y reconocer su utilidad.</p>
+		  <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 1B. Estación-Conexión a un punto de acceso de un módulo ESP y uso de la herramienta estatus LED.pdf " 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+	    </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p1b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/f3pQJfK7rbE" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+	  <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 1C. Estación</h3>
+          <h3>Conexión a un punto de acceso con ingreso de parámetros desde una terminal</h3>
+          <p>
+          	Una estación es un dispositivo que cuenta con un adaptador WiFi que le permite conectarse a una red para proveer y/o utilizar servicios. Los módulos WiFi que incorporan el SoC ESP8266 o los ESP32 pueden funcionar como estaciones y están diseñados para operar en modo infraestructura, es decir, que se deben conectar a un punto de acceso, el cual  gestionará las conexiones y transmitirá todos los paquetes. Al mismo tiempo, éstos están configurados como estaciones estáticas, por lo que no es posible comunicarse entre redes creadas por diferentes puntos de acceso. 
+          </p>
+          <p>
+          	La biblioteca ESP permite realizar las siguientes acciones cuando el módulo funciona como una estación:
+			<li>Conectarse a un punto de acceso.</li>
+			<li>Obtener o establecer la dirección IP asignada al módulo como estación. </li>
+			<li>Obtener o establecer la dirección MAC del módulo como estación.</li>
+			<li>Desconectarse de un punto de acceso. </li>
+		  </p>
+		  <p><b>Objetivo:</b> Mostrar como conectarse a un punto de acceso desde una interfaz y reconocer su utilidad.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 1C. Estación - Conexión a un punto de acceso con ingreso de parámetros desde una terminal.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p1c.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/xzBXSvnkZ2c" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 1D. Estación</h3>
+          <h3>Conexión a un punto de acceso con la mayor intensidad de señal</h3>
+          <p>
+          	Una estación es un dispositivo que cuenta con un adaptador WiFi que le permite conectarse a una red para proveer y/o utilizar servicios. Los módulos WiFi que incorporan el SoC ESP8266 o los ESP32 pueden funcionar como estaciones y están diseñados para operar en modo infraestructura, es decir, que se deben conectar a un punto de acceso, el cual  gestionará las conexiones y transmitirá todos los paquetes. Al mismo tiempo, éstos están configurados como estaciones estáticas, por lo que no es posible comunicarse entre redes creadas por diferentes puntos de acceso. 
+          </p>
+          <p>
+          	La biblioteca ESP permite realizar las siguientes acciones cuando el módulo funciona como una estación:
+			<li>Conectarse a un punto de acceso, en este caso estableciendo hasta tres puntos de acceso con sus respectivas contraseñas y se conectará al de mayor intensidad de señal.</li>
+			<li>Obtener o establecer la dirección IP asignada al módulo como estación. </li>
+			<li>Obtener o establecer la dirección MAC del módulo como estación.</li>
+			<li>Desconectarse de un punto de acceso. </li>
+			<li>Establecer un GPIO del módulo para leer el estado de un LED</li>
+		  </p>
+		  <p><b>Objetivo:</b> Ilustrar el proceso para conectarse a un punto de acceso que presente la mayor intensidad de señal.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 1D. Estación - Conexión a un punto de acceso con la mayor intensidad de señal.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p1d.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/QGMknOMBPPE" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 2. Smart config</h3>
+          
+          <p>
+          	La tecnología denominada Smart Config que está presente en los módulos que incorporan el SoC ESP8266 o los ESP32, utiliza el protocolo ESP-TOUCH desarrollado por Espressif Systems para configurar estos módulos de manera remota para conectarse a un punto de acceso. Este proceso está ideado para sistemas que no cuentan con una interfaz y es realizado de manera simple a través de una aplicación en un teléfono inteligente.
+          </p>
+          <p>
+          	El proceso para la utilización de Smart Config se describe a continuación:
+			<li>Habilitar el Smart Config en el módulo WiFi mediante la biblioteca ESP.</li>
+			<li>Conectar el teléfono inteligente al punto de acceso.</li>
+			<li>Abrir la aplicación ESP-TOUCH instalada en el teléfono inteligente.</li>
+			<li>Desconectarse de un punto de acceso. </li>
+			<li>4.	Ingresar la aplicación el SSID y la contraseña, este último en caso de la conexión este cifrada, para conectarse al punto de acceso.</li>
+			Con Smart Config la biblioteca ESP permite que el módulo sea conectado a cualquier punto de acceso sin tener que cambiar el código del uC PIC.
+		  </p>
+		  <p><b>Objetivo:</b> Mostar como utilizar Smart Config y reconocer su utilidad.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 2. Smart config.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p2.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/v6HbHRc9syQ" target="_blank">Vídeo</a>
+          </p>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 3. Servidor TCP</h3>
+          
+          <p>
+          	Cualquier dispositivo conectado a Internet requiere de un identificador único para comunicarse con otros dispositivos, dicho identificador se llama dirección IP, que comúnmente es representada con valores decimales divididos en octetos por puntos. La limitada cantidad de direcciones IP disponibles en Internet no es lo suficientemente numerosa para satisfacer la enorme cantidad de dispositivos conectados, por lo que los Proveedores de Servicios de Internet (IPS-Internet Service Provider), proporcionan subredes que mayormente son redes LAN (Local Area Network), y a cada una de éstas le asigna una dirección IP para tráfico en Internet, que es conocida como IP publica, mientras que, los dispositivos conectados a la subred se les otorga una dirección IP única (dentro de la red) nombrada como IP privada. Para que los dispositivos locales puedan comunicarse a Internet es necesario que la información pase de direcciones IP privadas a la IP publica compartida y viceversa, para dicha tarea se encarga la Traducción de Dirección de Red (NAT-Network Address Translation) [1].
+          </p>
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer un servidor TCP.</li>
+          	<li>Habilitar servidores.</li>
+          	<li>Establecer un buffer para cada puerto utilizado.</li>
+			<li>Comparar los buffers.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la memoria RAM del PIC.</li>
+			<li>Conocer que canal está siendo utilizado por un cliente.</li>
+			<li>Cerrar la conexión de algún cliente.</li>
+			<li>Eliminar uno o los dos servidores.</li>
+
+		  </p>
+		  <p><b>Objetivo:</b> Conocer las características disponibles para el módulo cuando es establecido como servidor TCP.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 3. Servidor TCP.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p3.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/1yZjVxhBa3w" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 4. Servidor SSL</h3>
+          
+          <p>
+          	La necesidad por conexiones seguras surgió cuando las empresas requirieron intercambiar información confidencial para realizar acciones como transacciones financieras o pagos a través de la navegación web. Una de las soluciones para atender a dicha necesidad fue el protocolo SSL (Secure Sockets Layer) desarrollado por Netscape Communications Corp. Posteriormente la versión 3.0 de este protocolo sería tomada como base para desarrollar un estándar de conexiones seguras llamado TLS (Transport Layer Security) [1]. TLS es un protocolo ampliamente utilizado en la navegación web mediante HTTPS (Hypertext Transfer Protocol Secure), pero puede ser utilizado para cualquier aplicación que utilice TCP [1].
+          </p>
+          <p>
+          	El servidor SSL en IDF cuenta con las mismas características que el servidor TCP que fue mostrado en la Práctica 3. Para la versión SDK el módulo es establecido como un servidor SSL que permite realizar las siguientes acciones:
+          	<li>Establecer un servidor SSL.</li>
+          	<li>Establecer un buffer información proveniente del cliente .</li>
+          	<li>Comparar los buffers.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la memoria RAM del PIC.</li>
+			<li>Eliminar uno o los dos servidores.</li>
+
+		  </p>
+		  <p><b>Objetivo:</b> Conocer las características para el módulo cuando es establecido como servidor SSL.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 4. Servidor SSL.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p4.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/QEAxYMeKIuI" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 5. Punto de acceso</h3>
+          
+          <p>
+          	El punto de acceso (Access Point-AP) o también conocido como estación base, es el responsable de coordinar, enviar y recibir los paquetes datos desde y hacia los diferentes dispositivos inalámbricos, conocidos como estaciones, estos dispositivos deberán estar dentro del área de cobertura del punto de acceso [3]. A lo anterior se le conoce como una arquitectura BSS.
+          </p>
+          <p>
+          	La biblioteca ESP permite realizar las siguientes acciones cuando el módulo funciona como un punto de acceso:
+          	
+          	<li>Crear un punto de acceso.</li>
+			<li>Desconectar a una estación del punto de acceso, conociendo previamente la dirección MAC de éste.</li>
+			<li>Obtener o establecer la dirección IP del punto de acceso.</li>
+			<li>Obtener o establecer la dirección MAC del punto de acceso.</li>
+		  </p>
+		  <p><b>Objetivo:</b> Mostrar cómo crear un punto de acceso y reconocer su utilidad para aplicaciones ajenas.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 5. Punto de acceso.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+	      
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          <a href="https://youtu.be/pZt6Lb4-xKc" target="_blank">
+          <img src="./img/esp_pic_p/p5.png" class="img-fluid"  width=300px >
+          </a>
+          <p>
+          	<a href="https://youtu.be/QEAxYMeKIuI" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 6. DNS</h3>
+          
+          <p>
+          	Todos los dispositivos conectados a Internet son identificados de manera única y jerárquica a través de una dirección IP. Esta forma de identificación es efectiva entre máquinas, sin embargo, para la navegación por Internet, a los humanos nos resulta impráctico recordar las direcciones IP de los servidores. Ante esta situación surgió DNS (Domain Name System) que asocia nombres legibles únicos con direcciones IP, con el fin de facilitar la navegación por Internet [1].
+          </p>
+          <p>
+          	Los módulos ESP pueden ejecutarse como un cliente DNS ejecutando comandos para solicitar la dirección IP de algún dominio al servidor 208.67.222.222. Además, para comunicarse con algún puerto TCP o UDP remoto, el módulo realiza la obtención de la IP si es que se le ha especificado algún nombre dominio. 
+          
+		  </p>
+		  <p><b>Objetivo:</b> Obtener la dirección IP de algunos servidores usando DNS.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 6. DNS.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+	      
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p6.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/GE77xjke6B4" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 7. Cliente TCP</h3>
+          
+          <p>
+          	TCP es el protocolo de transporte más popular de Internet, el cual provee de un servicio seguro orientado a la conexión, en que la información enviada es secciona en pequeños paquetes, los cuales son reconstruidos de forma ordenada por el destinatario, garantizando así, la integridad de la información que se transmite [1].
+          </p>
+          <p>
+          	La biblioteca ESP_PIC permite utilizar el canal por defecto del módulo (uni-conexión) o varios canales (multi-conexión) y así disponer de varios clientes a la vez que no necesariamente tienen que usar el protocolo TCP, sino que pueden funcionar con varios clientes UDP y/o un cliente SSL al mismo tiempo, incluso se puede habilitar el o los servidores del módulo siempre y cuando no utilicen los mismos canales.
+          </p>
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer conexión con uno o más servidores TCP.</li>
+          	<li>Establecer un buffer compartido para los clientes.</li>
+          	<li>Comparar el buffer con algún string.</li>
+          	<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+          	<li>Enviar strings alojados en la memoria RAM del PIC.</li>
+          	<li>Cerrar la conexión de cada cliente.</li>
+          </p>
+          
+		  <p><b>Objetivo:</b> Conocer algunas de las características disponibles para el módulo cuando es establecido como cliente TCP.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 7. Cliente TCP.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p7.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/1K2LVNygiIE" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 8. Cliente UDP</h3>
+          
+          <p>
+          	UDP (User Datagram Protocol) es un protocolo de transporte de Internet que envía paquetes llamados datagramas. A diferencia de TCP, UDP es un protocolo ligero y simple, que no cuenta con mecanismos para garantizar la entrega correcta de la información, por lo que ofrece un servicio poco confiable. Además, UDP ofrece un servicio sin conexión, esto quiere decir que al enviar información no existe interacción previa con el destinatario para asegurar que este último esté disponible para recibir información. UDP solo se encarga de enviar datagramas al puerto destino sin que sea necesario obtener una respuesta de él [1, 2]
+          </p>
+          <p>
+          	La biblioteca ESP permite utilizar el canal de comunicación por defecto del módulo para establecer un cliente UDP o emplear varios canales para más clientes, para la biblioteca, a la primera opción se le conoce como uni-conexión, mientras que a la segunda se le llama multi-conexión.  Es importante señalar que los nombres de estos modos fueron designados para dar homogeneidad a todos los tipos de clientes que se pueden establecer en el módulo, ya que como se ha indicado en UDP no existe conexión, más propiamente se podría referir como uni-canal y multi-canal respectivamente. 
+          </p>
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer conexión con uno o más clientes UDP.</li>
+          	<li>Establecer un buffer compartido para los clientes.</li>
+          	<li>Comparar el buffer con algún string.</li>
+          	<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+          	<li>Enviar strings alojados en la memoria RAM del PIC.</li>
+          	<li>Cerrar la conexión de cada cliente.</li>
+          </p>
+          
+		  <p><b>Objetivo:</b> Conocer algunas de las características disponibles para el módulo cuando es establecido como cliente UDP.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 8. Cliente UDP.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p8.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/tb2pO0fro88" target="_blank">Vídeo</a>
+          </p>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 9. Cliente Transparente</h3>
+          
+          <p>
+          	Para este modo de transmisión solo se permite crear un cliente. Al activarse el cliente, los paquetes a enviar son llevados al módulo sin la necesidad de ejecutar algún comando, del mismo modo, la información que el módulo retransmite al PIC proveniente de otro dispositivo, no contiene ningún identificador y que es tratado por la biblioteca ESP. Otra característica de este modo de transmisión es que cuando se establece una conexión TCP y ésta sea cerrada al perder comunicación o cuando el servidor haya decidido finalizarla, el módulo automáticamente se volverá a conectar al servidor. Por ello, la conexión realmente termina hasta que se le indique al módulo que debe finalizarla, o hasta que le sea imposible al módulo la reconexión. 
+          </p>
+          
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer conexión con servidor TCP o UDP.</li>
+          	<li>Establecer un buffer para la información proveniente del servidor.</li>
+          	<li>Comparar el buffer con algún string.</li>
+          	<li>Enviar strings alojados en la memoria RAM del PIC.</li>
+          	<li>Concluir la transmisión transparente y finalización de conexión.</li>
+          	<li>Concluir la transmisión transparente y finalización de conexión para cualquier momento de la ejecución del programa en caso de que se presente un fallo.</li>
+          </p>
+          
+		  <p><b>Objetivo:</b> Conocer las características disponibles para el módulo cuando es establecido como cliente transparente.</p>
+	      <p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 9. Cliente transparente.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p9.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/RUS8Du3JznM" target="_blank">Vídeo</a>
+          </p>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 10A. Cliente SSL</h3>
+          
+          <p>
+          	Secure Sockets Layer (SSL) y su sucesor, el Transport Layer Security (TLS) son dos protocolos que proveen seguridad a los datos generados desde la capa de aplicación, los cuales son encapsulados en paquetes SSL o TLS y transmitidos por TCP (un protocolo de transporte confiable) para proveer una conexión segura y cifrada a capas superiores. Uno de sus principales usos se da en HTTPS (Secure Hypertext Transfer Protocol), en el cual HTTP opera con SSL o TLS.
+          </p>
+          
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer uno o más servidor SSL.</li>
+          	<li>Establecer un buffer compartido para clientes.</li>
+          	<li>Comparar los buffers.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la memoria RAM del PIC.</li>
+			<li>Cerrar la conexión de cada cliente.</li>
+			<li>Habilitar el uso de fingerprint como auxiliar de autentificación.</li>
+          </p>
+          	<p><b>Objetivo:</b> Mostrar cómo crear un cliente SSL para establecer una conexión segura con un servidor.</p>
+	      	<p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 10A. - Cliente SSL.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      |</p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p10a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/pCNrpqpaK7A" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 10B. Cliente SSL: Uso de fingeprint</h3>
+          
+          <p>Estos protocolos están diseñados para proporcionar tres servicios:</p>
+          <li>Confidencialidad, todos los datos enviados son cifrados.</li>
+          <li>Autenticación del servidor o ambas partes, mediante un certificado digital firmado por alguna autoridad de certificación. La autenticación puede ser opcional.</li>
+          <li>Integridad del mensaje, todos los mensajes cifrados incluyen un resumen del mensaje para comprobar si han sido manipulados o falsificados.</li>
+          
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+          	<li>Establecer uno o más servidor SSL.</li>
+          	<li>Establecer un buffer compartido para clientes.</li>
+          	<li>Comparar los buffers.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la memoria RAM del PIC.</li>
+			<li>Cerrar la conexión de cada cliente.</li>
+			<li>Habilitar el uso de fingerprint como auxiliar de autentificación.</li>
+          </p>
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar el fingerprint para autenticar el servidor con el cual se quiere establecer una conexión segura.</p>
+          	<p>
+		  	<a 
+		  		href="doc/esp_practicas/Práctica 10B. - Cliente SSL - Uso de fingerprint.pdf" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      	</p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p10b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/UelL9SBXJU4" target="_blank">Vídeo</a>
+          </p>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 11A. RSSI: Estimación de distancia
+		  </h3>
+          
+          <p>
+          	El RSSI (Received Signal Strength Indicator) es una medida del nivel de potencia que recibe la antena de un dispositivo, es decir la intensidad de la señal (amplitud). Esta medida está expresada como un número negativo en dBm y puede ser obtenida al procesar los cambios en el nivel de voltaje del circuito indicador de intensidad de señal recibida del receptor. Entre más cercano esté el valor RSSI de cero, la señal será más fuerte y mientras más alejado esté la señal será más débil
+          <p>
+          	La biblioteca ESP_PIC se han desarrollado funciones para cualquiera de los SoC para:
+          	<li>Obtención de un valor RSSI.</li>
+			<li>Obtención del promedio de hasta 600 lecturas RSSI.</li>
+			<li>Obtención del valor máximo, mínimo y promedio tras 99 lecturas RSSI.</li>
+			<li>Obtención de valores RSSI de hasta cinco diferentes puntos de acceso.</li>
+			<li>Establecer la obtención continua de valores RSSI.</li>
+
+          </p>
+          <p><b>Objetivo:</b> 
+          	Ilustrar que el conjunto uC PIC y módulo WiFi puede ser utilizado para el desarrollo de trabajos que involucren estimación de distancia mediante valores RSSI.
+          </p>
+          <p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p11a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/3Qwes7D3bKo" target="_blank">Vídeo</a>
+          </p>
+          
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 11B. RSSI: Simulación de sensor de barrera</h3>
+          
+          <p>Generalmente el RSSI es utilizado en los  módulos WiFi para adaptar dinámicamente su modulación y esquemas de codificación para lograr la velocidad de datos óptima. Aunque también han surgido investigaciones para a partir de este mismo parámetro desarrollar diversas implementaciones.</p>
+          
+          <p>
+          	La biblioteca ESP_PIC se han desarrollado funciones para cualquiera de los SoC para:
+          	<li>Obtención de un valor RSSI.</li>
+			<li>Obtención del promedio de hasta 600 lecturas RSSI.</li>
+			<li>Obtención del valor máximo, mínimo y promedio tras 99 lecturas RSSI.</li>
+			<li>Obtención de valores RSSI de hasta cinco diferentes puntos de acceso.</li>
+			<li>Establecer la obtención continua de valores RSSI.</li>
+
+          </p>
+          	<p><b>Objetivo:</b> Ilustrar que el conjunto uC PIC y módulo WiFi puede ser utilizado para el desarrollo de trabajos que involucren simular el comportamiento un sensor de barrera.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p11b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/Yc4wNtC1mH8" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 11C. RSSI – Distinción de objetos</h3>
+          
+          <p>Generalmente el RSSI es utilizado en diversas implementaciones, entre las que destacan:
+			<li>Estimación de distancia.</li>
+			<li>Determinación de posición en interiores mediante métodos como trilateración.</li>
+			<li>Seguimiento en interiores.</li>
+			<li>Distinguir entre diferentes espesores de un material.</li>
+			<li>Detector de presencia de personas</li>
+	     </p>
+          
+          <p>
+          	La biblioteca ESP_PIC se han desarrollado funciones para cualquiera de los SoC para:
+          	<li>Obtención de un valor RSSI.</li>
+			<li>Obtención del promedio de hasta 600 lecturas RSSI.</li>
+			<li>Obtención del valor máximo, mínimo y promedio tras 99 lecturas RSSI.</li>
+			<li>Obtención de valores RSSI de hasta cinco diferentes puntos de acceso.</li>
+			<li>Establecer la obtención continua de valores RSSI.</li>
+
+          </p>
+          	<p><b>Objetivo:</b> Ilustrar que el conjunto uC PIC y módulo WiFi puede ser utilizado para el desarrollo de trabajos que involucren la distinción de objetos mediante valores RSSI.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p11c.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/jEOmJB5njeY" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 12. Simple pair</h3>
+          
+          <p>Simple pair es un protocolo de emparejamiento basado en ESP IE utilizado para:
+			<li>Realizar un rápido intercambio de claves o información entre dos dispositivos en pocos pasos.</li> 
+			<li>Realizar el emparejamiento entre dos dispositivos que no se habían emparejado antes.</li>
+	     </p>
+          
+          <p>
+          	La biblioteca ESP_PIC permite realizar las siguientes acciones relacionadas con simple pair:
+			<li>Verificar si un módulo ha habilitado simple pair.</li>
+			<li>Establecer y anunciar un mensaje o clave mediante simple pair.</li>
+			<li>Obtener un mensaje o clave de mediante simple pair.</li>
+			<li>Establecer un filtro que especifica a que módulos se entregará la información.</li>
+          </p>
+
+          	<p><b>Objetivo:</b> Mostar como utilizar simple pair para compartir información.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p12.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/lElqi78V2Mk" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 13. ESPNOW</h3>
+          
+          <p>ESPNOW es un protocolo desarrollado por Espressif Systems para la comunicación entre dispositivos, el cual se caracteriza por ser rápido, no orientado a la conexión, con transmisión en pequeños paquetes y por requerir un emparejamiento entre los dispositivos previo a la comunicación. Una vez realizado el emparejamiento, la conexión es segura, peer-to-peer y no se requiere realizar un handshake. 
+	     </p>
+          
+          <p>La biblioteca ESP_PIC permite realizar las siguientes acciones:
+			<li>Establecer opcionalmente un buffer para almacenar los mensajes que se reciban.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la mwmoria RAM del PIC.</li>
+			<li>Registrar peers en una tabla de comunicación ESPNOW.</li>
+			<li>Enviar un mensaje a un peer en particular.</li>
+			<li>Enviar el mismo mensaje a todos los peer registrados en la tabla de comunicación ESPNOW.</li>
+			<li>Establecer un filtro que especifica de que módulos se recibe información.</li>
+          </p>
+
+          	<p><b>Objetivo:</b> Mostar como utilizar simple pair para compartir información.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p13.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/3hrWrAp9N-s" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 14A. WiFi Tracking: Detección de módulos WiFi</h3>
+          
+          <p>WiFi Tracking hace referencia a los dispositivos que implementan la tecnología WiFi para detectar paquetes probe request que son emitidos por otros dispositivos WiFi en todos los canales, con la finalidad de obtener de las personas que usan éstos:
+			<li>Su localización</li>
+			<li>Monitoreo para reconstrucción o inferir sus trayectorias</li>
+			<li>Estimación de presencia.</li>
+	     </p>
+          
+          <p>La biblioteca ESP_PIC permite realizar las siguientes acciones:
+			<li>Emitir paquetes probe request</li>
+			<li>Registrar hasta ocho direcciones MAC.</li>
+			<li>Realizar la detección en un canal en específico o haciendo un barrido en todos.</li>
+			<li>Imprimir en una terminal todas las direcciones MAC.</li>
+			<li>Obtener el número de módulos que están emitiendo paquetes probe request.</li>
+          </p>
+
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar el módulo WiFi para detectar la presencia de otros módulos WiFi.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p14a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/Wa0_FEWALDU" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 14B. WiFi Tracking: Conteo de módulos WiFi</h3>
+          
+          <p>El probe request pertenece a los management frames, los cuales son un conjunto de paquetes que están definidos por el estándar IEEE 802.11 y que son utilizados para la comunicación inicial (proceso de conexión) entre una estación y un punto de acceso. El probe request es utilizado para detectar puntos de acceso cercanos, el cual contendrá los parámetros y capacidades de la estación y como es transmitido antes del proceso de asociación con un punto de acceso, el paquete no contiene ningún tipo de cifrado. Cuando la estación busca un punto de acceso específico (directed probe request), este paquete contendrá el SSID del punto de acceso, mientras que cuando busca cualquier punto de acceso (null probe request) no lo contendrá. 
+	     </p>
+          
+          <p>La biblioteca ESP_PIC permite realizar las siguientes acciones:
+			<li>Emitir paquetes probe request</li>
+			<li>Registrar hasta ocho direcciones MAC.</li>
+			<li>Realizar la detección en un canal en específico o haciendo un barrido en todos.</li>
+			<li>Imprimir en una terminal todas las direcciones MAC.</li>
+			<li>Obtener el número de módulos que están emitiendo paquetes probe request.</li>
+          </p>
+
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar un módulo WiFi para determinar el número de módulos WiFi que emiten paquetes probe request.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p14b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/cXfPfaHoeQc" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 15A. Funciones criptográficas: Funciones hash</h3>
+          
+          <p>Con un mundo cada vez más conectado que gira en torno del Internet y con un mayor uso de las tecnologías inalámbricas, los riesgos de seguridad de la información han aumentado, ya que la información que se transmite puede ser fácilmente comprometida. La criptografía se ha convertido en una rama de la información utilizada para brindar la seguridad, principalmente en la transferencia de información confidencial, convirtiendo información sin formato en un mensaje codificado secreto, el cual si es interceptado no es legible por el captor.
+	     </p>
+          <p>El proceso de conversión es conocido como cifrado y una vez que mensaje llega a su destino, se realiza sobre éste un proceso inverso conocido como descifrado para obtener el contenido original. Tanto para el cifrado como descifrado se utilizan algoritmos que hacen uso de una o más claves (keys), las cuales pueden ser palabras, números o frases, y dependiendo del algoritmo como la clave seleccionada es la fortaleza del cifrado.  
+	     </p>
+	     <p>Estos algoritmos, en función de sus claves, se clasifican en: 
+			<li>Algoritmos de clave simétrica (Clave secreta)</li>
+			<li>Algoritmos de clave asimétrica (Clave pública)</li>
+			<li>Funciones hash</li>
+		</p>
+  
+          <p>Los algoritmos criptográficos de clave simétrica que son soportados en la biblioteca ESP_PIC son AES ECB, AES CBC, ARC4, BLOWFISH ECB, BLOWFISH CBC, XTEA ECB, XTEA CBC, AES CFB128 y AES CFB8, mientras que las funciones hash que son soportadas son: SHA1, SHA254, SHA256, SHA384, SHA512, MD5 y MD4.
+          </p>
+
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar las funciones hash.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p15a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/vPMHPq6MUtY" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 15B. Funciones criptográficas: Cifrado y descifrado de clave simétrica</h3>
+          
+          <p>Los algoritmos criptográficos se pueden clasificar en función de sus claves: 
+			<li>Algoritmos de clave simétrica (Clave secreta)</li>
+			<li>Algoritmos de clave asimétrica (Clave pública)</li>
+			<li>Funciones hash</li>
+  	     </p>
+  
+          <p>En los algoritmos de clave simétrica tanto el emisor como el destinatario utilizan las mismas claves para cifrar y descifrar mensajes. Estas “claves usadas para cifrar y descifrar pueden ser diferentes, pero hay una transformación para ir de una clave hacia la otra”. Estos algoritmos operan en dos modos, continuo (stream) en el cual cada bit es cifrado de manera independiente, y en bloque en el cual se cifra por bloques de datos .</p>
+
+          <p>Los algoritmos criptográficos de clave simétrica que son soportados en la biblioteca ESP_PIC son AES ECB, AES CBC, ARC4, BLOWFISH ECB, BLOWFISH CBC, XTEA ECB, XTEA CBC, AES CFB128 y AES CFB8, mientras que las funciones hash que son soportadas son: SHA1, SHA254, SHA256, SHA384, SHA512, MD5 y MD4.
+          </p>
+
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar los algoritmos criptográficos de clave simétrica con clave de tamaño fijo.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p15b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/ijAmri85Gss" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 15C. Funciones criptográficas: Cifrado y descifrado de clave variable</h3>
+          
+          <p>El proceso de conversión es conocido como cifrado y una vez que mensaje llega a su destino, se realiza sobre éste un proceso inverso conocido como descifrado para obtener el contenido original. Tanto para el cifrado como descifrado se utilizan algoritmos que hacen uso de una o más claves (keys), las cuales pueden ser palabras, números o frases, y dependiendo del algoritmo como la clave seleccionada es la fortaleza del cifrado.  
+	     </p>
+          
+          <p>Los algoritmos criptográficos de clave simétrica que son soportados en la biblioteca ESP_PIC son AES ECB, AES CBC, ARC4, BLOWFISH ECB, BLOWFISH CBC, XTEA ECB, XTEA CBC, AES CFB128 y AES CFB8, mientras que las funciones hash que son soportadas son: SHA1, SHA254, SHA256, SHA384, SHA512, MD5 y MD4.
+          </p>
+
+          	<p><b>Objetivo:</b> Mostrar cómo utilizar los algoritmos criptográficos de clave simétrica con clave de tamaño variable.</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p15c.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/ijAmri85Gss" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>Práctica 16. SNTP</h3>
+          
+          <p>Uno de los protocolos de Internet más antiguos y famosos es NTP (Network Time Protocol), diseñado para sincronizar el reloj de los dispositivos conectados a Internet. NTP funciona por encima del protocolo de transporte UDP y sigue el modelo de cliente-servidor. Este protocolo cuenta con algoritmos para mitigar el desajuste generado por los retardos que existen entre la petición y la respuesta, ofreciendo una precisión de 1 a 50 ms.
+	     </p>
+          
+          	<p><b>Objetivo:</b> 
+          		Mostrar cómo utilizar el cliente SNTP.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p16.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/XHLNGvtilq0" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 17A. SMTP: Texto plano
+          </h3>
+          
+          <p>
+          	El proceso “tradicional” de envío de correo electrónico inicia con el agente de usuario del emisor, éste es un programa que se encarga de proporcionar una interfaz para que el usuario pueda interactuar con el sistema de correo electrónico, permitiéndole redactar y leer correos. 
+	     </p>
+	     <p>
+	     	Una vez que el correo se ha redactado es llevado al agente de transferencia de mensajes, que tiene como encomienda transferir el correo al agente de transferencia de mensajes del destinatario mediante el protocolo SMTP (Simple Mail Transfer Protocol). Este protocolo funciona por encima de una conexión TCP o SSL, comúnmente establecida en el puerto 25 para TCP y en el 465 para SSL. El correo se transmite del cliente SMTP al servidor SMTP, mediante la ejecución de comandos de texto ASCII de 7 bits, por cada comando que se ejecute el servidor responde con un código de respuesta que indica el resultado del comando. En la actualidad es más común que los servidores usen SMTP con extensiones (Extended SMTP), que otorgan características como autentificación y transmisión de datos binarios.
+	     </p>
+	     <p>
+	     	El usuario de la biblioteca puede optar por dos opciones para enviar un correo: una es utilizar la función send_mail_smtp, que internamente construye todo el contenido del correo solicitado, pero solo puede enviar texto plano; la otra opción es construir por completo el contenido del correo que se desee enviar haciendo uso de varias funciones.
+	     </p>
+          
+          	<p><b>Objetivo:</b> 
+          		Enviar un correo electrónico con contenido de texto plano a través del protocolo SMTP.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p17a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/_F1WProiLWY" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 17B. SMTP: Multiformato 
+          </h3>
+          
+          <p>
+          	En un principio al implementar un protocolo ASCII como transmisor (SMTP), los correos electrónicos únicamente contenían texto en ingles sin ningún formato, esta limitante fue solucionada mediante el desarrollo de MIME (Extensiones Multipropósito de Correo Internet-Multipurpose Internet Mail Extensions) que aporta encabezados para describir el contenido de correos electrónicos y de otras aplicaciones de Internet como la navegación web. 
+	     </p>
+	     <p>
+			El encabezado que permite utilizar MIME es MIME-Version: 1.0., y el encabezado Content-Transfer-Encoding: indica cómo se debe codificar el contenido, permitiendo cinco distintas formas.
+		 </p>
+	     <p>
+	     	La biblioteca ESP permite enviar correos electrónicos a través del protocolo SMTP. El usuario tiene la posibilidad de construir por completo el contenido del correo, permitiendo incluir los encabezados que requiera, de esta forma, el correo que envíe el módulo puede contener más que simple texto e incluso puede adjuntar archivos.  La biblioteca provee de tres funciones para personalizar el contenido del correo.
+	     </p>
+          
+          	<p><b>Objetivo:</b> 
+          		Enviar un correo electrónico con contenido multi-formato a través del protocolo SMTP.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p17b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/bdoT3j8LHjs" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 18A. Servidor web: Páginas estáticas
+          </h3>
+          
+          <p>
+          	La aplicación más importante del Internet es la web que consiste principalmente en una inmensa cantidad de información almacenada en millones de máquinas en todo el mundo. Esta información se encuentra en forma de páginas web, las cuales son accedidas por usuarios a través de una interfaz gráfica que proporcionan los navegadores web.
+	     </p>
+	     <p>
+			Los recursos del PIC son definidos en un loop del programa principal. Este loop está constituido de un switch que evalúa la variable que le corresponde al recurso que se encuentra en el primer elemento de la cola de atención de peticiones. Cada uno de los casos utiliza un carácter ASCII que representa un recurso disponible y especifica la respuesta que se otorgará al cliente cuando sea solicitado dicho recurso. Es necesario un caso por defecto el cual se encargue recorrer la cola cuando se invalide algún elemento.
+		 </p>
+	      
+          	<p><b>Objetivo:</b> 
+          		Establecer al módulo como un servidor web para proporcionar una página web estática.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p18a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/LTvpGudKxBA" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 18B. Servidor web: Páginas dinámicas
+          </h3>
+          
+          <p>
+          	Las páginas dinámicas permiten a los usuarios acceder a aplicaciones y servicios, como envío de correos, herramientas de trabajo colaborativo, compras en Internet, computación en nube y servicios streaming. Este tipo de páginas son receptivas y responsivas, por lo que implementan la ejecución de secuencias de comandos llamados scripts, los cuales pueden ejecutarse en el navegador (cliente) o en el servidor.
+	     </p>
+	     <p>
+			Como se señaló en la práctica 18A, la biblioteca dispone de funciones que atienden a peticiones que utilicen el método PUT con respuestas definidas, que facilita el diseño de este tipo de aplicaciones.  
+		 </p>
+	      
+          	<p><b>Objetivo:</b> 
+          		Establecer al módulo como un servidor web para proporcionar páginas web dinámicas.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p18b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/LTvpGudKxBA" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 18C. Servidor Web: Envío de información mediante el URL
+          </h3>
+          
+          <p>
+          	Como se ha mostrado en prácticas anteriores, existen distintas formas de comunicarse con el módulo ESP y en consecuencia de controlar al microcontrolador PIC, sin embargo, todas requieren de algún software que ofrezca alguna de las opciones de comunicación del módulo. De todos estos programas, lo más fáciles de acceder son los navegadores web, que están presentes en la mayoría de las computadoras y teléfonos inteligentes.
+	     </p>
+	     <p>
+			Para este tipo de mensajes, la biblioteca ESP solo puede almacenarlos y compararlos con un string, así que el usuario le puede dar cualquier formato para utilizarlos, por ejemplo, podría implementar cadenas de consulta (Query string) para enviar en un solo mensaje distintos datos.
+		 </p>
+	      
+          	<p><b>Objetivo:</b> 
+          		Enviar información al módulo a través del URL utilizando un navegador web.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p18c.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/cwfC6jvR8fM" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 19A. Cliente HTTP: Consumiendo un servicio web
+          </h3>
+          
+          <p>
+          	Inicialmente el uso de HTTP estaba limitado a mostrar información en páginas web, pero en la actualidad su uso se ha extendido a la transferencia de información entre distintas aplicaciones sin importar que estén programadas en distintos lenguajes o sistemas operativos, esto beneficia la interoperabilidad de las aplicaciones disponibles en Internet.
+	     </p>
+	     <p>
+			La biblioteca sólo puede alojar la representación en texto de pares (claves y valores) simples como strings, números y valores booleanos, no es posible manejar arreglos, ni matrices, ni listas, ni objetos. Los valores de cada clave almacenada pueden ser consultados y comparados como strings.
+		 </p>
+	      
+          	<p><b>Objetivo:</b> 
+          		Enviar información al módulo a través del URL utilizando un navegador web.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p19a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/_qnn-Lm_eKg" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 19B. Cliente HTTP: Simulando un servicio web
+          </h3>
+          
+          <p>
+          	En prácticas anteriores se ha mostrado que el módulo ESP puede funcionar como un servidor o un cliente HTTP, por lo que es posible comunicar módulos entre si utilizando este protocolo. Utilizar HTTP implica que los módulos desempeñen alguno de los dos roles. Un PIC-ESP podría ser utilizado como un servidor para recabar información de otros módulos que funcionan como clientes, y a la vez otros clientes podrían consultar la información sin comunicarse con los que la originaron.
+	     </p>
+	     	      
+          	<p><b>Objetivo:</b> 
+          		Utilizar el protocolo HTTP para comunicar dos módulos ESP.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p19b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/nvaajmrZXUY" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 20. Websocket 
+          </h3>
+          
+          <p>
+          	El modelo de solicitud-respuesta usada en HTTP no es tan eficiente para aplicaciones que requieren de bajas latencias. En este modelo, el servidor no puede enviar información al cliente hasta que éste la solicite, por lo que el cliente es quien dirige la comunicación, ejecutando peticiones HTTP para este fin.
+	     </p>
+	     <p>
+	     	En la biblioteca ESP_PIC se ha desarrollado el software para establecer al PIC-ESP como un websocket server, bajo ciertas limitaciones. En ésta se permite establecer una sola conexión TCP, por lo que solo puede atender un cliente a la vez, si se intenta establecer conexiones paralelas: para la versión IDF, se rechaza la conexión hasta que haya concluido la anteriormente establecida; mientras que para las versiones SDK, cada vez que se solicite una conexión paralela, el PIC-ESP cierra la conexión anterior y establece una nueva conexión con el nuevo cliente. 
+	     </p>
+	     	      
+          	<p><b>Objetivo:</b> 
+          		Proporcionar una página web dinámica que intercambie información con el módulo mediante websocket.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p20.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/hdWIehs30bM" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 21A. MDNS:  Reclamar un hostname
+          </h3>
+          
+          <p>
+          	Multicast DNS (MDNS) es un protocolo creado para traducir hostnames únicos que terminen con .local en direcciones IP en redes locales que no cuentan con un servidor DNS, para esto cuando un dispositivo requiere resolver un hostname envía un mensaje de consulta a una dirección IP multicast (224.0.0.251) y puerto (5353) previamente acordado por los participantes. Este mensaje de consulta llegará a todos los dispositivos de la red local y cuando uno de ellos observa su propio nombre en el mensaje de consulta, éste responderá a la misma dirección con un mensaje que incluye su dirección IP y un TTL (Time to Live), que indica cuantos segundos debe mantener la información el dispositivo que realizó la consulta, en su memoria cache. Esta información también es utilizada por los demás dispositivos para actualizar su información.
+	     </p>
+	     <p>
+	     	La biblioteca ESP permite realizar las siguientes acciones:
+	     	<li>Reclamar un hostname.</li>
+	     	<li>Anunciar hasta dos servicios con dos registros TXT. </li>
+	     	<li>Obtener la dirección IP de un hotsname.</li>
+	     </p>
+	     	      
+          	<p><b>Objetivo:</b> 
+          		Mostrar como reclamar un hostname y obtener la dirección IP de uno. 
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p21a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/tVNgMWAqZ7E" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+
+	<div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 21B. MDNS: Anunciar un servicio MDNS
+          </h3>
+          
+          <p>
+          	El proceso para reclamar un hostname se da en dos etapas, la primera, conocida como probing, envía mensajes de tipo consulta con el hostname deseado para verificar que este nombre es único, lo cual se comprueba al no recibir respuestas. La segunda etapa conocida como announcing, se envían mensajes de tipo respuesta a todos los dispositivos participantes para que almacenen el nombre y quien lo reclama. Cuando el dispositivo desea abandonar el grupo MDNS, envía un mensaje tipo respuesta con su información y un TTL con valor de cero, esto hace que los dispositivos que reciben el mensaje eliminen la información del dispositivo de su memoria cacheación.
+	     </p>
+	     <p>
+	     	La biblioteca ESP permite realizar las siguientes acciones:
+	     	<li>Reclamar un hostname.</li>
+	     	<li>Anunciar hasta dos servicios con dos registros TXT. </li>
+	     	<li>Obtener la dirección IP de un hotsname.</li>
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Mostrar como anunciar un servicio y reconocer su utilidad.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p21b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/25G9SroEvn4" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 22A. APIs de Google con OAuth 2.0 
+          </h3>
+          
+          <p>
+          	Oauth 2.0 es un estándar de autorización que proporciona flujos simples de autorización para que aplicaciones accedan a recursos web protegidos. Este estándar es ampliamente utilizado en Internet por empresas como Google, Facebook, Microsoft, GitHub, Twitter y muchas más.
+	     </p>
+	     <p>
+	     	Teniendo en cuenta lo anterior, en la biblioteca ESP_PIC se han desarrollado dos funciones para obtener y refrescar access tokens, sin embargo, éstas están acotadas para las APIs de Google. Esta elección se debió a que las APIs de Google cuentan con un gran catálogo de opciones con las que se pueden realizar distintas aplicaciones aunado a que Google implementa algunos flujos de autorización destinados a dispositivos con reducidas capacidades computacionales e interactivas, como es el caso del conjunto que se propone en este trabajo. 
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Obtener un access token para ingresar a una de las API de Google.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p22a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/z0uQgFVSk6s" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 22B. APIs de Google con Oauth 2.0: Registro y consulta de datos de una hoja de cálculo
+          </h3>
+          
+          <p>
+          	La API de hojas de cálculo de Google (Google Sheets API) permite crear, leer, modificar y eliminar hojas de cálculo. Esta API está basada en un servicio REST, por lo que los clientes la utilizan mediante peticiones HTTP. Al igual que todas las demás APIs de Google, ésta sólo puede ser accedida mediante una conexión segura. 
+	     </p>
+	     <p>
+	     	Como la biblioteca ESP_PIC permite al conjunto PIC-ESP establecer conexiones seguras y ejecutar libremente peticiones HTTP, éste puede funcionar como una aplicación que consuma el servicio de la API de hojas de cálculo, sin embargo, como ya se ha expresado en prácticas anteriores la biblioteca ESP no proporciona una solución general para manejar la información proveniente de las respuestas de las peticiones, por lo que su utilidad puede ser reducida a aplicaciones que no requieran solicitar grandes cantidades de información a la API. 
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Registrar y consultar datos de una de hoja de cálculo a través de la API de hojas de cálculo de Google.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p22b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/vllyx1eMA7g" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 22C. APIs de Google con OAuth 2.0: Envío de correo electrónico a través de la API de Gmail
+          </h3>
+          
+          <p>
+          	La API de Gmail es otra de las API del catálogo de Google, la cual también está basada en REST. Esta API permite a las aplicaciones realizar diversas acciones, entre las que destacan: redactar, enviar y revisar correos electrónicos. Todas las peticiones que fluyen a la API requieren de autorización a través de OAuth2.0, para la cual se ofrecen hasta diez scopes. 
+	     </p>
+	     <p>
+	     	El PIC-ESP puede hacer uso de la API de Gmail al construir y ejecutar peticiones HTTP utilizando las funciones de la biblioteca ESP. Sin embargo, presenta el defecto de que el almacenamiento y la extracción de información útil del contenido de las respuestas, no es óptimo. En consecuencia, desarrollar aplicaciones que involucren respuestas con grandes cantidades de información, como revisar correos, pueden resultar tareas complicadas que consumirían gran parte de los recursos del microcontrolador PIC. 
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Enviar correos electrónicos a través de la API de Gmail.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p22c.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/Sh3mbooFDFU" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 23A. MQTT Publicador
+          </h3>
+          
+          <p>
+          	MQTT (Message Queue Telemetry Transport) es un protocolo de aplicación binario que fue concebido inicialmente para comunicar sensores en oleoductos de petróleo con satélites. Su nombre no fue dado en representación a su arquitectura ya que no es un protocolo de colas de mensajería, si no fue dado como parte de una serie de productos desarrollados por IBM. En la actualidad MQTT está siendo implementado en comunicación máquina-máquina (M2M) y aplicaciones IoT, ya que es liviano, abierto y de fácil implementación.
+	     </p>
+	     <p>
+	     	A continuación, se señalan las limitaciones que tiene el usuario al usar la biblioteca:  
+			<li>Todas las sesiones son no persistentes.</li>
+			<li>Se puede activar mensaje de última voluntad, pero éste sólo puede ser establecido con calidad QoS0 y como no retenido.</li>
+			<li>La longitud máxima de envío/recepción de strings es de 127 bytes.</li>
+			<li>Para los mecanismos de entrega de mensajes PUBLISH para QoS1 y QoS2, la biblioteca intenta enviar/recibir el mensaje en un máximo de tres intentos, en caso de que no se complete con estos intentos el mensaje es descartado.
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Establecer al módulo como un cliente MQTT que funcione como publicador utilizando la plataforma CloudMQTT
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p23a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/6_5DUOR7MJs" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 23B. MQTT Suscriptor
+          </h3>
+          
+          <p>
+			La biblioteca ESP_PIC permite establecer al módulo como un suscriptor de uno o varios temas, seleccionando para cada uno de éstos la calidad máxima con la que recibe los mensajes. 
+         </p>
+	     <p>
+	     	La biblioteca ESP al recibir un mensaje PUBLISH lo almacena en un buffer. Para que la carga útil pueda ser extraída del buffer, se tiene que completar con el mecanismo de entrega que especifica el protocolo. La biblioteca proporciona una función que atiende la recepción de mensajes, revisa si hay un nuevo mensaje PUBLISH almacenado en el buffer, si el mensaje cuenta con calidad de servicio igual a cero (QoS0) entonces lo marca como “listo” para su extracción, pero si el mensaje tiene QoS1 o QoS2, entonces completa el mecanismo de entrega que implica el intercambio de mensajes con el bróker, una vez concluido el procesamiento del mensaje, éste es marcado como “listo”. .
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Establecer al módulo como un cliente MQTT que funcione como suscriptor utilizando la plataforma CloudMQTT.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p23b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/cDkTwcbmToA" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 24A. Plataformas IoT: 
+          </h3>
+          
+          <p>
+			La biblioteca ESP_PIC permite establecer al módulo como un suscriptor de uno o varios temas, seleccionando para cada uno de éstos la calidad máxima con la que recibe los mensajes. 
+         </p>
+	     <p>
+	     	Las plataformas IoT son aquellas a las cuales los dispositivos envían y/o reciben información para su almacenamiento, visualización y procesamiento, con el fin darle utilidad a dicha información. Estas plataformas ofrecen servidores a los cuales los dispositivos se conectan para intercambiar información utilizando protocolos de aplicación como MQTT, HTTP y CoAP
+	     </p>
+	           
+         <p><b>Objetivo:</b> 
+          		Comunicar el módulo ESP con la plataforma Thingspeak utilizando el protocolo HTTP y MQTT.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p24a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/30S2_jpibnc" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 24B. Plataformas IoT: Thingsboard 
+          </h3>
+          
+          <p>
+			Thingsboard es una plataforma IoT de código abierto, que permite a los dispositivos comunicarse mediante los protocolos MQTT, HTTP y CoAP. Esta plataforma ofrece dos ediciones, una es la ThingsBoard Community Edition que es totalmente gratuita y otra es ThingsBoard Professional Edition que requiere de la compra de alguno de sus planes de suscripción
+         </p>
+	     
+	           
+         <p><b>Objetivo:</b> 
+          		Comunicar el módulo ESP con la plataforma Thingsboard utilizando el protocolo MQTT.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p24B.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/TSGWe2IvDPE" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 24C. Plataformas IoT: Adafruit 
+          </h3>
+          
+          <p>
+			Adafruit IO es una plataforma IoT que ofrece la popular empresa Adafruit Industries dedicada a la venta de hardware basado de código abierto. Esta plataforma ofrece dos formas de comunicación, una mediante una API basada en REST y otra con un bróker MQTT. Ambas formas permiten a los dispositivos enviar/recibir información. La diferencia entre usar una u otra, recae en el tipo de aplicación que se requiera o en las capacidades del dispositivo a conectar
+         </p>
+	     
+	           
+         <p><b>Objetivo:</b> 
+          		Comunicar al módulo ESP a la plataforma Adafruit IO utilizando el protocolo MQTT.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p24C.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/20hRKIMbqe8" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 25A. IFTTT: Asistente de Google
+          </h3>
+          
+          <p>
+			IFTTT es una base de servicios web que ofrece automatización de tareas a través de la vinculación de distintos servicios online y redes sociales. Este sirve como intermediario de importantes servicios como Facebook, Twitter, Uber, Gmail, Asistente de Google, Amazon Alexa y muchos más, permitiendo crear un sin de aplicaciones.
+         </p>
+         <p>
+         	Algunas de las aplicaciones más populares creadas con IFTTT son: sincronizar automáticamente la foto de perfil de distintas redes sociales, crear alarmas en dispositivos Android o iOS en función del clima e incluso utilizar los asistentes de Google y Amazon para controlar dispositivos domóticos.           	
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Utilizar el servicio IFTTT para controlar el estado de un LED mediante comandos de voz del Asistente de Google.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p25a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/q0MJCtUwSmc" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+	<div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 25B. IFTTT : Publicar un Tuit
+          </h3>
+          
+          <p>
+			IFTTT es una base de servicios web que ofrece automatización de tareas a través de la vinculación de distintos servicios online y redes sociales. Este sirve como intermediario de importantes servicios como Facebook, Twitter, Uber, Gmail, Asistente de Google, Amazon Alexa y muchos más, permitiendo crear un sin de aplicaciones.
+         </p>
+         <p>
+         	Algunas de las aplicaciones más populares creadas con IFTTT son: sincronizar automáticamente la foto de perfil de distintas redes sociales, crear alarmas en dispositivos Android o iOS en función del clima e incluso utilizar los asistentes de Google y Amazon para controlar dispositivos domóticos.           	
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Utilizar el servicio IFTTT para publicar un tuit que contenga el valor leído una de las entradas analógicas del microcontrolador PIC.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p25b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/q9O-umI1mkI" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 26 – Cliente especial
+          </h3>
+          
+          <p>
+			El denominado cliente especial, es un único cliente TCP o SSL que puede ser creado en los módulos que incorporen el SoC ESP8266 para conectarse a un servidor TCP o SSL. Este cliente tiene la peculiaridad de ser capaz de aplicar un filtro a todos los mensajes que se reciben de un servidor o al primero que se recibe tras haber enviado un mensaje al servidor. La finalidad de los filtros es reducir la información que llega al microcontrolador PIC, eliminando parte de la información que no es requerida y, con ello, reducir el número de veces que es llamada la interrupción por recepción de datos RDA para su captura
+         </p>
+         <p>
+         	La biblioteca ESP_PIC permite realizar las siguientes acciones:
+         	<li>Crear un único cliente espacial y éste ede ser TCP  SSL.
+			<li>Establecer opcionalmente un buffer para almacenar los mensajes que se reciban.</li>
+			<li>Compatat el buffer con algún string.</li>
+			<li>Enviar strings alojados en la memoria ROM del PIC.</li>
+			<li>Enviar strings e información binaria alojada en la mwmoria RAM del PIC.</li>
+			<li>Cerrar la conexión del cliente.</li>
+			<li>Cuenta con dos filtros, los cuales pueden ser aplicados a todos los mensajes que se reciban desde el servidor.</li>			
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar la utilidad del cliente especial y el impacto para futuras mejoras de la biblioteca.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p26.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/S8on5iL0j_g" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 27A. Upgrade PIC: Evento de actualización por hardware
+          </h3>
+          
+          <p>
+			La actualización del programa de un microcontrolador PIC de manera inalámbrica permite cambiar el programa que el microcontrolador ejecute sin tener que conectar a éste directamente a una computadora para realizar el proceso, lo cual resulta de utilidad cuando no se tiene un fácil acceso al microcontrolador. En este caso, la actualización está diseñada para llevarse a cabo a nivel local a través de una red WLAN, la computadora donde se ejecuta el programa que realizará la actualización debe estar a cierta distancia del conjunto microcontrolador PIC-módulo WiFi e incorporar WiFi. 
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar como cambiar el programa que está ejecutando un microcontrolador PIC de manera inalámbrica por hardware.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p27a.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/qfi8snnUVmQ" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 27B. Upgrade PIC: Evento de actualización por software
+          </h3>
+          
+          <p>
+			Las modificaciones realizadas en el firmware del módulo WiFi contemplaron la creación de una función especial, la cual al ser llamada configurará al módulo para crear un punto de acceso que permita la conexión de una sola estación y creará un servidor TCP en el puerto 100 con la dirección IP 192.168.4.0. Este servidor está programado para ejecutar una secuencia de pasos, conforme a los paquetes recibidos, que permitan realizar la actualización del programa del microcontrolador. 
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar como cambiar el programa que está ejecutando un microcontrolador PIC de manera inalámbrica por software.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p27b.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/FOftKKUPfIM" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 28. GPIO 
+          </h3>
+          
+          <p>
+			Se conoce como pines de propósito general (general purpose Input/Output-GPIO) a los pines de un microcontrolador que pueden ser configurados como entradas o salidas, utilizados con actuadores o sensores, o con algún otro componente que requiera comunicarse con el microcontrolador. El SoC ESP8266 cuenta con 17 GPIOs, mientras que los SoC ESP32 cuentan con 34 GPIOs, los cuales pueden ser configurados como internamente pull-up, pull-down o alta impedancia. El número GPIOs disponibles para el usuario puede variar, ya que algunos de estos GPIOs pueden estar reservados para ejecutar otras funciones como SDIO, UART o SPI modificando los registros adecuados y dependen de que el hardware del módulo brinde acceso a éstos. 
+         </p>
+         <p>
+         	La biblioteca ESP permite realizar las siguientes acciones:
+			<li>Utilizar los GPIO de los módulos WiFi</li>
+			<li>Configurar el GPIO como entrada o salida</li>
+			<li>Configurar el GPIO internamente como pull-up o pull down (Dependiendo del SoC).</li>
+
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar cómo utilizar los GPIOs incorporados en el módulo WiFi
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p28.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/BBngc6M91VA" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+    <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 29. PWM 
+          </h3>
+          
+          <p>
+			La modulación por ancho de pulsos (Pulse Width Modulation – PWM) es una técnica para dividir una señal en una cadena de pulsos de frecuencia constante cuyas alturas se relacionan con la magnitud del voltaje de la señal de entrada. Al variar el ciclo de trabajo de estos pulsos, es decir, la fracción de cada ciclo en la cual el voltaje es alto (ver Figura P29.1), se puede controlar el valor promedio del voltaje resultante. Un ciclo de trabajo pequeño resultará en un menor voltaje promedio de salida, mientras que un ciclo de trabajo grande resultará en un mayor voltaje promedio de salida 
+         </p>
+         <p>
+         	La biblioteca ESP permite realizar las siguientes acciones:
+			<li>Configurar los canales PWM y habilitar su respectivo GPIO.</li>
+			<li>Actualizar el valor del periodo o frecuencia conforme a la versión del firmware de comandos AT.</li>
+			<li>Actualizar el valor del ciclo de trabajo de un canal en específico.</li>
+
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar cómo utilizar el PWM incorporado en el módulo WiFi.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p29.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/mo3HVkWAa6E" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row align-items-center text-right py-3">
+        <div class="col-sm-12 col-md-9">
+
+          <h3>
+          	Práctica 30 – Convertidor analógico a digital 
+          </h3>
+          
+          <p>
+			El convertidor analógico a digital (ADC) toma una señal analógica y la convierte en una palabra binaria que representa el nivel de la señal de entrada [1]. En este caso en particular, los módulos WiFi que implementan el SoC ESP8266 cuentan con un convertidor analógico-digital de aproximaciones sucesivas de 10 bits de precisión, por lo que el mayor número binario que puede alcanzar es 1024 y tiene una resolución de 1/1024V.
+         </p>
+         <p>
+         	La biblioteca ESP permite realizar las siguientes acciones:
+			<li>Configurar los canales ADC en ESP-IDF</li>
+			<li>Realizar una lectura ADC</li>
+         </p>
+
+	       <p><b>Objetivo:</b> 
+          		Mostrar cómo utilizar el ADC incorporado en el módulo WiFi.
+          	</p>
+          	<p>
+		  	<a 
+		  		href="#" 
+		  	target="_blank"><b>Descargar</b> </a>
+	      </p>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+          
+          <img src="./img/esp_pic_p/p30.png" class="img-fluid" alt="" width=300px>
+          <p>
+          	<a href="https://youtu.be/mlfXiKM6IaY" target="_blank">Vídeo</a>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+
+    </div>
+
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    -->
+  </body>
+</html>
